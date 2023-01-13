@@ -5,8 +5,8 @@ import IconPinia from './shared/icons/IconPinia.vue';
 </script>
 
 <template>
+  <IconPinia />
   <header>
-    <IconPinia class="logo" />
     <div class="wrapper">
       <nav>
         <RouterLink to="/counter">Counter</RouterLink>
