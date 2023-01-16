@@ -1,8 +1,8 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
 interface counterOptionsState {
-    count: number;
-    lastChange?: Date;
+    count: number
+    lastChange?: Date
 }
 
 export const useCounterOptionsStore = defineStore('counterOptions', {

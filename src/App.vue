@@ -5,11 +5,12 @@ import IconPinia from './shared/icons/IconPinia.vue';
 </script>
 
 <template>
-  <IconPinia />
   <header>
+    <IconPinia />
     <div class="wrapper">
       <nav>
-        <RouterLink to="/counter">Counter</RouterLink>
+        <RouterLink :to="{ name: 'counter-setup' }">Counter setup</RouterLink>
+        <RouterLink :to="{ name: 'counter-options' }">Counter options</RouterLink>
       </nav>
     </div>
   </header>
