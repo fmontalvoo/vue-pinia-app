@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 
-import IconPinia from './shared/icons/IconPinia.vue';
+import IconPinia from './shared/icons/IconPinia.vue'
 </script>
 
 <template>
@@ -9,6 +9,7 @@ import IconPinia from './shared/icons/IconPinia.vue';
     <IconPinia />
     <div class="wrapper">
       <nav>
+        <RouterLink :to="{ name: 'clients-list' }">Clientes</RouterLink>
         <RouterLink :to="{ name: 'counter-setup' }">Counter setup</RouterLink>
         <RouterLink :to="{ name: 'counter-options' }">Counter options</RouterLink>
       </nav>

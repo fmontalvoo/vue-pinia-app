@@ -1,5 +1,6 @@
 export default {
     name: 'counter',
+    redirect: { name: 'counter-setup' },
     component: () => import('../layouts/CounterLayout.vue'),
     children: [
         {

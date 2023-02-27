@@ -4,6 +4,7 @@ import { storeToRefs } from 'pinia'
 import { useCounterOptionsStore } from '@/store/counter.options'
 
 const counterStore = useCounterOptionsStore()
+
 const { count, squareCount } = storeToRefs(counterStore)
 
 </script>

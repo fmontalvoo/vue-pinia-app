@@ -4,6 +4,7 @@ import { storeToRefs } from 'pinia'
 import { useCounterSetupStore } from '@/store/counter.setup'
 
 const counterStore = useCounterSetupStore()
+
 const { count, squareCount } = storeToRefs(counterStore)
 
 </script>
