@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, toRef, watch } from 'vue'
+import { toRef } from 'vue'
 
 const props = defineProps<{
     totalPages: number
@@ -12,19 +12,13 @@ const emits = defineEmits<{
 
 const totalPages = toRef(props, 'totalPages')
 const currentPage = toRef(props, 'currentPage')
-
-const totalPageNumbers = ref<number[]>([])
-
-watch(totalPages, () => {
-    totalPageNumbers.value = [...new Array(totalPages.value)].map((_, i) => i + 1)
-}, { immediate: true })
 </script>
 
 <template>
     <div>
         <button :disabled="currentPage === 1" @click="emits('pageChanged', currentPage - 1)">Anterior</button>
 
-        <button v-for="page of totalPageNumbers" :key="page" :class="{ active: currentPage === page }"
+        <button v-for="page of totalPages" :key="page" :class="{ active: currentPage === page }"
             @click="emits('pageChanged', page)">{{ page }}</button>
 
         <button :disabled="currentPage === totalPages" @click="emits('pageChanged', currentPage + 1)">Siguiente</button>
