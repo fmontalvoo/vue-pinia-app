@@ -17,6 +17,16 @@ export const getClient = async (id: number) => {
     }
 }
 
+export const updateClient = async (update: Client) => {
+    try {
+        const { id, ...rest } = update
+        const { data } = await api.patch<Client>(`${id}`, rest)
+        return data
+    } catch (error) {
+        throw error
+    }
+}
+
 export const getClients = async (page: number = 1) => {
     try {
         const { data } = await api.get<Client[]>(`?_page=${page}`)

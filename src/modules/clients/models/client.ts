@@ -12,6 +12,8 @@ export interface Client {
     address:  string;
 }
 
+// export type ClientUpdate = Partial<Omit<Client, 'id'>>
+
 export const toClient = (json: string): Client => JSON.parse(json)
 
 export const clientToJson = (value: Client): string => JSON.stringify(value)
